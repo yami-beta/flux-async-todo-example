@@ -2,7 +2,8 @@ import { ReduceStore } from 'flux/utils';
 import { Dispatcher } from 'flux';
 
 const todos = [
-  { id: '0', text: 'first todo', complete: false }
+  { id: '0', text: 'first todo', complete: false },
+  { id: '1', text: 'second todo', complete: true }
 ];
 
 class TodoStore extends ReduceStore {

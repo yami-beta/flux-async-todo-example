@@ -1,11 +1,12 @@
 import React from 'react';
+import Todo from './Todo';
 
 const TodoList = ({ todos }) => {
   return (
     <ul>
       {
         todos.map(todo => {
-          return <li key={todo.id} className={todo.complete ? 'done' : ''}>{todo.text}</li>;
+          return <Todo key={todo.id} {...todo} />;
         })
       }
     </ul>
