@@ -1,5 +1,8 @@
 import { ReduceStore } from 'flux/utils';
 import { Dispatcher } from 'flux';
+import ActionDispatcher from '../ActionDispatcher';
+
+export const actionDispatcher = new ActionDispatcher(new Dispatcher());
 
 const todos = [
   { id: '0', text: 'first todo', complete: false },
@@ -24,5 +27,4 @@ class TodoStore extends ReduceStore {
   }
 }
 
-export default new TodoStore(new Dispatcher());
-
+export default new TodoStore(actionDispatcher.dispatcher);
