@@ -4,13 +4,14 @@
 初めに同期的にTodoをCRUD(作成・読込・更新・削除)するアプリケーションを作成した後、expressによるサーバで非同期にCRUDを行うアプリケーションへと変更する。
 
 1. 同期処理によるTodoリスト
-    1. AppContainerの作成
-    2. TodoStoreの作成
-    3. TodoListコンポーネントの作成
-    4. Todoコンポーネントの作成
-    5. ActionDispatcherの作成
+    1. AppContainerの実装
+    2. TodoStoreの実装
+    3. TodoListコンポーネントの実装
+    4. Todoコンポーネントの実装
+    5. ActionDispatcherの実装
+    6. TodoStoreの`reduce()`の実装
 2. 非同期処理によるTodoリスト
-    1. サーバの作成
-    2. ActionDispatcherの更新
+    1. サーバの実装
+    2. ActionDispatcherの変更
     3. TodoStoreの変更
 
