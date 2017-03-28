@@ -20,6 +20,41 @@ class TodoStore extends ReduceStore {
 
   reduce(state = todos, action) {
     switch(action.type) {
+      case 'todo/load': {
+        return state;
+        break;
+      }
+      case 'todo/create': {
+        const id = todos.length;
+        const todo = Object.assign({}, action.payload, { id });
+        return [ ...state, todo ];
+        break;
+      }
+      case 'todo/update': {
+        const { id } = action.payload;
+        const todoIndex = todos.findIndex((element, index) => element.id === id);
+        if (todoIndex < 0) {
+          console.log(`error: id = ${id} not found`);
+          return state;
+        }
+
+        const todo = Object.assign({}, todos[todoIndex], action.payload);
+        return [
+          ...todos.slice(0, todoIndex),
+          todo,
+          ...todos.slice(todoIndex + 1)
+        ];
+        break;
+      }
+      case 'todo/delete': {
+        const { id } = action.payload;
+        const todoIndex = todos.findIndex((element, index) => element.id === id);
+        if (todoIndex < 0) {
+          return state;
+        }
+        return todos.splice(todoIndex, 1);
+        break;
+      }
       default: {
         return state;
       }
