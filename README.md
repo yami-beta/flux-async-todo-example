@@ -10,6 +10,7 @@
     4. Todoコンポーネントの実装
     5. ActionDispatcherの実装
     6. TodoStoreの`reduce()`の実装
+    7. CreateTodoコンポーネントの実装
 2. 非同期処理によるTodoリスト
     1. サーバの実装
     2. ActionDispatcherの変更

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'flux/utils';
 import TodoList from '../components/TodoList';
+import CreateTodo from '../components/CreateTodo';
 import TodoStore from '../stores/TodoStore';
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
     return (
       <div>
         <p>Flux Async Todo Example</p>
+        <CreateTodo {...this.state}/>
         <TodoList {...this.state}/>
       </div>
     )
