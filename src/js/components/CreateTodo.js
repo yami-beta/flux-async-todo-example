@@ -9,6 +9,8 @@ const CreateTodo = (props) => {
 
   const createTodo = (event) => {
     TodoActions.create({ text });
+    text = '';
+    document.getElementById('create-todo-input').value = '';
   };
 
   return (
