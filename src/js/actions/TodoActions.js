@@ -11,6 +11,13 @@ const TodoActions = {
     });
   },
 
+  delete: ({ id }) => {
+    actionDispatcher.dispatch({
+      type: 'todo/delete',
+      payload: { id },
+    });
+  },
+
   toggleComplete: (todo) => {
     actionDispatcher.dispatch({
       type: 'todo/update',
